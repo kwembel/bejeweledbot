@@ -1,0 +1,32 @@
+BEJEWELED BOT
+
+
+Bejeweledbot is a simple bejeweled game solver, in Ruby/GTK.
+The program has been tested succesfully with the following bejeweled games:
+- Gweled (Linux game)
+- Bejeweled blitz (online game in Flash).
+
+The program is able to:
+- take screenshots of the game,
+- find the best movement to be played,
+- control the mouse to play the movement.
+
+Requirements:
+- Ruby
+- Gtk
+- ruby-gtk2 package
+- xte or xdotool (external program used to control the mouse)
+
+How to start the program:
+./bejeweledbot.rb -t <table_coordinates> -n <number of jewels per line>
+- table coordinates : table top left corner x position, talble top left corner height position, table width, table height.
+- number of squares per line : for now the table is supposed to have the same number of jewels per line and per columns.
+
+Example: bejeweledbot.rb -t 580,45,375,375 -n 8
+
+The table coordinates on the screen (in pixels) can be found using the tools xte or xdotool. For example the following 
+command waits 3 seconds and display the cursor position on the terminal:
+xdotool sleep 3 getmouselocation --shell
+
+
+
